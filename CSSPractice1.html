@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Practice Designs - FFXIV</title>
+    <link rel="stylesheet" type="text/css" href="IndexStyleSheet.css" />
+    <style type="text/css">
+        body {
+            background-color: black;
+        }
+
+        .imgbanner {
+            width: 100%;
+            height: 25%;
+        }
+
+        .banner-container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .img-container-bottomright {
+            position: absolute;
+            bottom: 12px;
+            font-size: 25pt;
+            background-color: black;
+            width: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        td {
+            width: auto;
+            height: auto;
+        }
+
+
+        img {
+            width: 200px;
+            height: 200px;
+        }
+        /*Content for Grid Layout*/
+        .gridHeader {
+            grid-area: header;
+            opacity: 0.5;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .gridMenu {
+            grid-area: menu;
+            background-color: #2196F3;
+        }
+
+        .gridMain {
+            grid-area: main;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .gridRight {
+            grid-area: right;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .gridFooter {
+            grid-area: footer;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
+            grid-gap: 10px;
+            padding: 10px;
+            width: 100%;
+        }
+
+            .grid-container > div {
+                text-align: center;
+                padding: 20px 0;
+                font-size: 30px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="banner-container">
+            <img class="imgbanner" src="Images/FFXIV_Linkshell_Concept_Art.jpg" />
+        <div class="img-container-bottomright">Final Fantasy XIV Class Overview</div>
+    </div>
+
+    <!--Potentially change so front page looks more sleek by only having the job icons leading to more personalized job pages-->
+
+        <div class="gridMain">Select a job from the icons below.
+        </div>
+    <table style="float:left;">
+        <tr>
+            <td><img src="Images/pldicon.png" /></td>
+            <td><img src="Images/waricon.png" /></td>
+            <td><img src="Images/drkicon.png" /></td>
+        </tr>
+        <tr>
+            <td><img src="Images/schicon.png" /></td>
+            <td><img src="Images/whmicon.png" /></td>
+            <td><img src="Images/asticon.png" /></td>
+        </tr>
+        </table>
+    <table >
+        <tr>
+            <td><img src="Images/mnkicon.png" /></td>
+            <td><img src="Images/drgicon.png" /></td>
+            <td><img src="Images/ninicon.png" /></td>
+        </tr>
+        <tr>
+            <td><img src="Images/blmicon.png" /></td>
+            <td><img src="Images/smnicon.png" /></td>
+            <td><img src="Images/brdicon.png" /></td>
+        </tr>
+        </table>
+    <table>
+        <tr>
+            <td><img src="Images/mchicon.png" /></td>
+            <td><img src="Images/rdmicon.png" /></td>
+            <td><img src="Images/samicon.png" /></td>
+        </tr>
+    </table>
+</body>
+</html>
