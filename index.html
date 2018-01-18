@@ -1,55 +1,228 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Katie Weaver's Portfolio</title>
-  <style type="text/css">
-    ul {
-    list-style-type:none;
-    margin:0;
-    padding:0;
-    overflow:hidden;
-    background-color:white;
-    position:fixed;
-    top:0;
-    width:100%;
-}
-li{
-    float:left;
-}
-li a {
-    display:block;
-    color:black;
-    text-align:center;
-    padding:14px 16px;
-    text-decoration:none;
-    font-family:'Californian FB'
-}
-li a:hover:not(.active) {
-    background-color:lightgray;
-}
-.active {
-    background-color:lightblue;
-}
-  </style>
+    <meta charset="UTF-8">
+    <title>Katie Weaver's Portfolio</title>
+    <style type="text/css">
+        /*CSS for navigation bar*/
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100%;
+            background-color: #444;
+        }
+
+        h1 {
+            font-size: 1em;
+            text-align: center;
+            color: #eee;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+
+        .nav-container {
+            width: 300px;
+            margin-top: 10px;
+            box-shadow: 0 2px 2px 2px black;
+            transition: all 0.3s linear;
+        }
+
+        .nav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            height: 50px;
+            position: relative;
+            background: linear-gradient(#292929, #242424);
+        }
+
+        a {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            border-bottom: 1px solid black;
+            text-decoration: none;
+            display: block;
+            height: 100%;
+            width: 100%;
+            line-height: 50px;
+            color: #bbb;
+            text-transform: uppercase;
+            font-weight: bold;
+            padding-left: 25%;
+            border-left: 5px solid transparent;
+            letter-spacing: 1px;
+            transition: all 0.3s linear;
+        }
+
+        .active a {
+            color: #B93632;
+            border-left: 5px solid #B93632;
+            background-color: #1B1B1B;
+            outline: 0;
+        }
+
+        li:not(.active):hover a {
+            color: #eee;
+            border-left: 5px solid #FCFCFC;
+            background-color: #1B1B1B;
+        }
+
+        span[class ^= "icon"] {
+            position: absolute;
+            left: 20px;
+            font-size: 1.5em;
+            transition: all 0.3s linear;
+        }
+
+        @media only screen and (max-width : 860px) {
+
+            .text {
+                display: none;
+            }
+
+            .nav-container, a {
+                width: 70px;
+            }
+
+                a:hover {
+                    width: 200px;
+                    z-index: 1;
+                    border-top: 1px solid rgba(255,255,255,0.1);
+                    border-bottom: 1px solid black;
+                    box-shadow: 0 0 1px 1px black;
+                }
+
+                    a:hover .text {
+                        display: block;
+                        padding-left: 30%;
+                    }
+        }
+
+        @media only screen and (max-width : 480px) {
+            .nav-container, a {
+                width: 50px;
+            }
+
+            span[class ^= "icon"] {
+                left: 8px;
+            }
+        }
+        /*Div Containers*/
+        .outer-container {
+            margin-top:17%;
+        }
+        .content-container {
+            background-color: #1B1B1B;
+        }
+        p {
+            color:#bbb;
+        }
+
+        /*Table*/
+        td {
+            height: 50px;
+            position: relative;
+            background: linear-gradient(#292929, #242424);
+            width:25%;
+        }
+        td a{
+            padding-left:0%;
+        }
+        td:not(.active):hover a {
+            color: #eee;
+            background-color: #1B1B1B;
+        }
+        table.center {
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .toggle {
+            display:none;
+        }
+        /***************************************************/
+
+
+    </style>
 </head>
-<body style="margin:0px;">
-      <ul>
-        <li><a class="active" href="katieweaver.github.io/index.html">Home</a></li>
-        <li><a href="#index.html">Home</a></li>
-        <li><a href="#Dining">Current Projects</a></li>
-        <li><a href="#about">School Projects</a></li>
-    </ul>
-  <h1>Hello World!</h1>
-  <p>This website is currently under construction, but there previous school projects currently available for viewing. Feel free to poke around!
-    <br/>
-     <p>Website for Fictional Beach Resort. (In-progress)</p>
-  <a href="https://katieweaver.github.io/CSSPractice1.html">Here</a>
-  <br/>
-  <p>Mimic Zillow's affordability calculator for a school project.</p>
-  <a href="https://katieweaver.github.io/SchoolProjectCSS.html" class="button">Here</a>
-  <br/>
-  Go to ASP.Net project repository.
-  <a href="https://github.com/katieweaver/ASP-Project-Portfolio/tree/master">Here</a>
-  </body>
+<body style="margin:0px; background-color:#242424; background-position:top; background-attachment:fixed; width:100%; text-align:center;">
+
+    <div class="nav-container" style="float:left;">
+        <ul class="nav">
+            <li class="active">
+                <a href="#">
+                    <span class="icon-home"></span>
+                    <span class="text">home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="icon-user"></span>
+                    <span class="text">Expand All</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="text">Close All</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <br />
+    <br />
+    <div class="outer-container"></div>
+
+
+
+
+    <div class="content-container">
+        <h1 style="padding-top:10px; font-size:25pt; color: #bbb;">Hello World!</h1>
+        <p>
+            This website is currently under construction, but there previous school projects currently available for viewing. However, feel free to take a look while things are being set up!
+        </p>
+            <br />
+
+            <table class="center">
+                <tr>
+                    <td class="toggle"></td>
+                </tr>
+                <tr style="color:#bbb; font-size:18pt;">
+                    <td>Website Designs/Templates</td>
+                    <td>.NET Respository</td>
+                    <td>School Projects</td>
+                    </tr>
+                <tr>
+                    <td>
+                        <a href="https://katieweaver.github.io/CSSPractice1.html">Beach Resort (In-Progress)</a>
+                    </td>
+                    <td>
+                        <a href="https://github.com/katieweaver/ASP-Project-Portfolio/tree/master">ASP.Net Repository</a>
+                    </td>
+                    <td>
+                        <a href="https://katieweaver.github.io/SchoolProjectCSS.html">Zillow Mock-up</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><a href="https://github.com/katieweaver/ASP-Project-Portfolio/blob/master/nevadavoices.wordpress.2017-12-17.xml">Wordpress XML</a></td>
+                </tr>
+                    </table>
+    </div>
+    <script type="text/javascript">
+        $('li').click(function () {
+
+            $(this).addClass('active')
+                .siblings()
+                .removeClass('active');
+
+        });
+        $('a').click(function () {
+            $('td').toggle();
+        });
+
+
+    </script>
+</body>
 </html>
