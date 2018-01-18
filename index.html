@@ -3,8 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <title>Katie Weaver's Portfolio</title>
+  <style type="text/css">
+    ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:white;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+li{
+    float:left;
+}
+li a {
+    display:block;
+    color:black;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    font-family:'Californian FB'
+}
+li a:hover:not(.active) {
+    background-color:lightgray;
+}
+.active {
+    background-color:lightblue;
+}
+  </style>
 </head>
 <body>
+      <ul>
+        <li><a class="active" href="katieweaver.github.io/index.html">Home</a></li>
+        <li><a href="#Rooms">Rooms</a></li>
+        <li><a href="#Dining">Dining</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
   <h1>Hello World!</h1>
   <p>This website is currently under construction, but there previous school projects currently available for viewing. Feel free to poke around!
     <br/>
