@@ -2,126 +2,201 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Practice Designs - FFXIV</title>
-    <link rel="stylesheet" type="text/css" href="IndexStyleSheet.css" />
+    <title></title>
+    <link rel="stylesheet" href="Costa.css" type="text/css" />
     <style type="text/css">
-        body {
-            background-color: black;
-        }
+        .container {
+    width: 100%;
+    margin-top: 800px;
+    left: -5px;
+    /*height: 900px;*/
+}
 
-        .imgbanner {
-            width: 100%;
-            height: 25%;
-        }
+.navbar {
+    overflow: hidden;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    margin-left: 0;
+    width: 100%;
+    font-size:20pt;
+    color:white;
+}
 
-        .banner-container {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
+.bottom-left {
+    position: absolute;
+    bottom: 150px;
+    left: 16px;
+    font-size: 50pt;
+    font-family: 'Californian FB';
+    font-weight: 400;
+}
 
-        .img-container-bottomright {
-            position: absolute;
-            bottom: 12px;
-            font-size: 25pt;
-            background-color: black;
-            width: 100%;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+.floatcontainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
 
-        td {
-            width: auto;
-            height: auto;
-        }
+.bottom-left-2 {
+    position: absolute;
+    bottom: 100px;
+    left: 32px;
+    font-size: 30pt;
+    font-family: 'Californian FB';
+    font-weight: 400;
+}
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -300%);
+    font-size: 100pt;
+    font-family: 'Californian FB';
+    font-weight: 400;
+}
 
-        img {
-            width: 200px;
-            height: 200px;
-        }
-        /*Content for Grid Layout*/
-        .gridHeader {
-            grid-area: header;
-            opacity: 0.5;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+.centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -1200%);
+    font-size: 30pt;
+    font-family: 'Californian FB';
+    font-weight: 400;
+}
 
-        .gridMenu {
-            grid-area: menu;
-            background-color: #2196F3;
-        }
+.container-contents {
+    text-align: center;
+    padding-bottom: 15px;
+}
 
-        .gridMain {
-            grid-area: main;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+h2 {
+    font-family: 'Californian FB';
+    font-weight: 400;
+    font-size: 30pt;
+    margin-top:15px;
+}
+p {
+    font-family:'Californian FB';
+    font-size:18pt;
+}
+td {
+    width:700px;
+    height:400px;
+}
+button {
+    padding:15px;
+    text-transform:capitalize;
+    background:white;
+    font-size:15pt;
+    font-family:'Californian FB';
+}
+button:hover {
+    background-color:darkgray;
+    cursor:pointer;
+}
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
+    background-color:white;
+    position:fixed;
+    top:0;
+    width:100%;
+}
+li{
+    float:left;
+}
+li a {
+    display:block;
+    color:black;
+    text-align:center;
+    padding:14px 16px;
+    text-decoration:none;
+    font-family:'Californian FB'
+}
 
-        .gridRight {
-            grid-area: right;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+li a:hover:not(.active) {
+    background-color:lightgray;
+}
 
-        .gridFooter {
-            grid-area: footer;
-            background-color: rgba(255, 255, 255, 0.8);
-        }
+.active {
+    background-color:lightblue;
+}
+.solid-container {
+    background-color:white;
+    bottom:0;
+    margin-top:900px;
 
-        .grid-container {
-            display: grid;
-            grid-template-areas: 'header header header header header header' 'menu main main main right right' 'menu footer footer footer footer footer';
-            grid-gap: 10px;
-            padding: 10px;
-            width: 100%;
-        }
-
-            .grid-container > div {
-                text-align: center;
-                padding: 20px 0;
-                font-size: 30px;
-            }
-
+}
+    .solid-container > p {
+        margin-left: 100px;
+        color: darkgrey;
+    }
     </style>
 </head>
-<body>
-    <div class="banner-container">
-            <img class="imgbanner" src="Images/FFXIV_Linkshell_Concept_Art.jpg" />
-        <div class="img-container-bottomright">Final Fantasy XIV Class Overview</div>
+<body style="background-image:url('Images/Beach.jpg'); background-attachment:fixed; background-position:center; width:100%; margin:0px;">
+   
+    <!--Nav Bar-->
+    <!--<div class="navbar">
+        <a href="">Home</a>
+        <a href="">About</a>
+        <a href="">Contact</a>
+    </div>-->
+
+    <ul>
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#Rooms">Rooms</a></li>
+        <li><a href="#Dining">Dining</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <!--Content-->
+    <div class="floatcontainer">
+        <div class="centered">Costa del Sol</div>
+        <div class="centered2">Adventure Away From Adventure</div>
     </div>
 
-    <!--Potentially change so front page looks more sleek by only having the job icons leading to more personalized job pages-->
-
-        <div class="gridMain">Select a job from the icons below.
+    <div class="container">
+        <div class="container-contents" style="text-align:center;">
+                <table style="float:left; margin-left:5%; margin-top:50px; padding:0;" cellspacing="0">
+                    <tr>
+                        <td style="width:700px; height:400px; ">
+                            <img src="Images/WaterHouse.jpg" alt="House on the Water" style="width:100%; height:100%; display:block;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:white;"><h2>Luxury Condos</h2><hr style="width:60%;"/>
+                        <br />
+                        <p style="margin-left:30px; margin-right:30px; text-align:left; color:darkgrey;">Enjoy the best Costa del Sol has to offer with rentals overlooking the pristine waters of the Rhotano Sea. Create unforgettable memories and experiences with the unparalleled view the villa has to offer.</p>
+                        <br />
+                        <button>Learn More</button></td>
+                    </tr>
+                </table>
+                <table style="float:right; margin-right:5%; margin-top:50px; padding:0;" cellspacing="0">
+                    <tr>
+                        <td>
+                            <img src="Images/BeachDining.jpg" alt="Dining on the Beach" style="width:100%; height:100%; display:block;"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="background-color:white;"><h2>Beach Dining</h2><hr style="width:60%"/>
+                        <br />
+                        <p style="margin-left:30px; margin-right:30px; text-align:left; color:darkgrey;">Relax along a 10 mile stretch of beach filled with soft, white sand. Dine on five-star meals and exotics drinks miles away from any port city.</p>
+                        <br /><br/>
+                        <button>Learn More</button>
+                        </td>
+                    </tr>
+                </table>
         </div>
-    <table style="float:left;">
-        <tr>
-            <td><img src="Images/pldicon.png" /></td>
-            <td><img src="Images/waricon.png" /></td>
-            <td><img src="Images/drkicon.png" /></td>
-        </tr>
-        <tr>
-            <td><img src="Images/schicon.png" /></td>
-            <td><img src="Images/whmicon.png" /></td>
-            <td><img src="Images/asticon.png" /></td>
-        </tr>
-        </table>
-    <table >
-        <tr>
-            <td><img src="Images/mnkicon.png" /></td>
-            <td><img src="Images/drgicon.png" /></td>
-            <td><img src="Images/ninicon.png" /></td>
-        </tr>
-        <tr>
-            <td><img src="Images/blmicon.png" /></td>
-            <td><img src="Images/smnicon.png" /></td>
-            <td><img src="Images/brdicon.png" /></td>
-        </tr>
-        </table>
-    <table>
-        <tr>
-            <td><img src="Images/mchicon.png" /></td>
-            <td><img src="Images/rdmicon.png" /></td>
-            <td><img src="Images/samicon.png" /></td>
-        </tr>
-    </table>
+    </div>
+    <br />
+    <div class="solid-container">
+        <p style="color:black; font-family:'Californian FB'; font-size:30pt; padding-top:50px; text-align:center;">Villa del Sol</p><hr style="width:80%;"/>
+        <p style="padding">The Villa invites guests to relax and enjoy the calm waters of Eastern Lominsa.</p>
+    </div>
 </body>
 </html>
