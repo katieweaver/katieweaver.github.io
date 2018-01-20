@@ -181,46 +181,77 @@
     <div class="content-container">
         <h1 style="padding-top:10px; font-size:25pt; color: #bbb;">Hello World!</h1>
         <p>
-            This website is currently under construction, but there previous school projects currently available for viewing. Feel free to take a look while things are being set up!
+            This website is currently under construction, but there previous school projects currently available for viewing. However, feel free to take a look while things are being set up!
         </p>
             <br />
 
-            <table class="center">
-                <tr>
-                    <td class="toggle"></td>
-                </tr>
-                <tr style="color:#bbb; font-size:18pt;">
-                    <td>Website Designs/Templates</td>
-                    <td>.NET Respository</td>
-                    <td>School Projects</td>
-                    </tr>
-                <tr>
-                    <td>
-                        <a href="https://katieweaver.github.io/CSSPractice1.html">Beach Resort (In-Progress)</a>
-                    </td>
-                    <td>
-                        <a href="https://github.com/katieweaver/ASP-Project-Portfolio/tree/master">ASP.Net Repository</a>
-                    </td>
-                    <td>
-                        <a href="https://katieweaver.github.io/SchoolProjectCSS.html">Zillow Mock-up</a>
-                    </td>
-                </tr>
-                <tr>
-                    <td><a href="https://github.com/katieweaver/ASP-Project-Portfolio/blob/master/nevadavoices.wordpress.2017-12-17.xml">Wordpress XML</a></td>
-                </tr>
-                    </table>
+        <table class="center" style="width:50%;">
+            <tr>
+                <td style="color:#bbb; font-size:18pt;" colspan="2">Website Designs/Templates</td>
+            </tr>
+            <tr><td colspan="2" style="height:500px;"><img src="CostaPreview1-17-18.png" style="width:100%; height:100%;"/></td></tr>
+            <tr>
+                <td style="color:#bbb; font-size:18pt;">Beach Resort (In-Progress)</td>
+                <td><a id="beachResort" href="https://katieweaver.github.io/CSSPractice1.html" onclick="togglePreview()">Preview</a></td>
+            </tr>
+            <tr>
+                <td style="color:#bbb; font-size:18pt;">WordPreview XML (Nevada Voices)</td>
+                <td><a href="https://github.com/katieweaver/ASP-Project-Portfolio/blob/master/nevadavoices.wordpress.2017-12-17.xml">Wordpress XML</a></td>
+            </tr>
+
+        </table>
+        
+        <table class="center" style="width:50%">
+            <tr>
+                <td style="color:#bbb; font-size:18pt;">.Net Repository</td>
+            </tr>
+            <tr>
+                <td style="height:500px;"><img src="NevadaVoices1-17-18.png" style="width:100%; height:100%;"/></td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://github.com/katieweaver/ASP-Project-Portfolio/tree/master">ASP.Net Repository</a>
+                </td>
+            </tr>
+        </table>
+
+        <table class="center" style="width:50%;">
+            <tr>
+                <td style="color:#bbb; font-size:18pt;" colspan="2">School Projects</td>
+            </tr>
+            <tr><td colspan="2" style="height:500px;"><img src="ZillowMock.png" style="width:100%; height:100%;" /></td></tr>
+            <tr>
+                <td style="color:#bbb; font-size:18pt;">Zillow Mock-up</td>
+                <td><a id="beachResort" href="https://katieweaver.github.io/SchoolProjectCSS.html" onclick="togglePreview()">Preview</a></td>
+            </tr>
+        </table>
     </div>
+    <!--<script src="http://code.jquery.com/jquery-1.10.1.min.js">
+            $(function() {
+        });
+        $('#beachResort').click(function () {
+            $('#hiddenDiv').toggle();
+        });
+    </script>-->
+
     <script type="text/javascript">
-        $('li').click(function () {
+        //$('li').click(function () {
 
-            $(this).addClass('active')
-                .siblings()
-                .removeClass('active');
+        //    $(this).addClass('active')
+        //        .siblings()
+        //        .removeClass('active');
 
-        });
-        $('a').click(function () {
-            $('td').toggle();
-        });
+        //});
+        function togglePreview() {
+            var x = document.getElementById("hiddenDiv");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            }
+            else {
+                x.style.display = "none";
+            }
+        }
+
 
 
     </script>
