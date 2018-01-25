@@ -1,0 +1,45 @@
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="AriyalaRemake.WebForm1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <style type="text/css">
+        .topNav {
+            background-color:#bbb;
+            overflow:hidden;
+        }
+        .topNav a{
+            float:left;
+            text-align:center;
+            padding:10px 14px;
+            text-decoration:none;
+            font-size:15pt;
+        }
+        .topNav a:hover {
+            background-color:dimgrey;
+            color:white;
+            cursor:pointer;
+        }
+        .topNav a.active {
+            background-color:indianred;
+        }
+        .topNav .icon {
+            display:none;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div runat="server" class="topNav">
+            <a runat="server" class="active" href="#home">Home</a>
+            <a runat="server" class="Tanks" href="">Tanks</a>
+            <a runat="server" class="Healers" href="">Healers</a>
+            <a runat="server" class="DPS" href="">DPS</a>
+            <a runat="server" href="javascript:void(0);" class="icon" onclick="toolbarFunction()">&#9976;</a>
+        </div>
+    </form>
+</body>
+</html>
